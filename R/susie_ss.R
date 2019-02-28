@@ -140,7 +140,7 @@ susie_ss = function(XtX, Xty, n, var_y = 1, L=10,
     elbo[i+1] = get_objective_ss(XtX, Xty, s, var_y, n)
 
     # if(max(abs(alpha_new - alpha_old)) < tol) break;
-
+    print(elbo[i+1])
     if((elbo[i+1]-elbo[i])<tol) {
       s$converged = TRUE
       break;
